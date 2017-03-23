@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link href="main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
+    <title> Number Guesser </title>
+</head>
+
+<body onload="getNumber(min, max), resetDisable()">
+    <header>
+        <h1 class="header-number"> Number </h1>
+        <h1 class="header-guesser"> Guesser </h1>
+    </header>
+    <main>
+        <input id="user-guess" class="guess-box" placeholder="Enter your guess" type="number" onchange="restrictInput(this)">
+        <br>
+        <div>
+            <input id="min-range-setting" class="range-settings" type="number" value="1">
+            <label for="min-range-setting"> Minimum Possible Value</label>
+        </div>
+        <div>
+            <input id="max-range-setting" class="range-settings" type="number" value="10">
+            <label for="max-range-setting"> Maximum Possible Value</label>
+        </div>
+
+        <br>
+        <button id="user-guess-submit"><a href="#last-guess"> Guess </a></button>
+        <button id="user-guess-clear"> Clear </button>
+        <h2 id="last-guess"> Welcome! </h2>
+        <p id="guess-display"></p>
+        <h2 id="guess-hint">  </h2>
+        <button id="game-reset" class="game-reset">Reset</button>
+        <script src="js.js"></script>
+</body>
+
+</html>
